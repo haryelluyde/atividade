@@ -1,0 +1,13 @@
+<h1>{{ receita }}</h1>
+<i>Por: {{ receita.autor }}</i>
+<br><hr>
+Tempo de preparo: {{ receita.tempo_preparo }}
+
+Rendimento: {{ receita.rendimento }}<br><br>
+
+<b>Ingredientes:</b>
+<ul>
+    {% for ingrediente in receita.ingrediente_set.all %}
+        <li>{{ ingrediente }}</li>
+    {% endfor %}
+</ul>
